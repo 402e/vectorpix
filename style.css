@@ -1,0 +1,273 @@
+:root {
+    --black: #000;
+    --dark-blue: #1d2b53;
+    --purple: #7e2553;
+    --green: #008751;
+    --brown: #ab5236;
+    --dark-gray: #5f574f;
+    --light-gray: #c2c3c7;
+    --white: #fff1e8;
+    --red: #ff004d;
+    --orange: #ffa300;
+    --yellow: #ffec27;
+    --lime: #00e436;
+    --blue: #29adff;
+    --gray: #83769c;
+    --pink: #ff77a8;
+    --peach: #ffccaa;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Press Start 2P";
+    font-style: normal;
+    font-weight: 400;
+    src: url("press-start-2p.woff2") format("woff2");
+}
+
+[hidden] {
+    display: none !important;
+}
+
+:focus {
+    outline: 4px solid var(--red);
+    outline-offset: 4px;
+}
+
+:focus:active {
+    outline: none;
+}
+
+html {
+    height: 100%;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 36px 32px 20px;
+    box-sizing: border-box;
+    font: 14px/22px "Press Start 2P", serif;
+    letter-spacing: 0.05em;
+    color: var(--black);
+    background: var(--white);
+}
+
+.svg-wrapper {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.svg-wrapper svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    margin-bottom: 12px;
+}
+
+.header__title {
+    margin: 0 0 8px;
+    padding: 0;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.header__pix {
+    color: var(--gray);
+}
+
+.main {
+    margin-bottom: 24px;
+}
+
+.form__button {
+    margin: 0;
+    padding: 12px 16px;
+    border: 3px solid var(--dark-gray);
+    font: inherit;
+    text-transform: uppercase;
+    color: var(--black);
+    background: var(--light-gray);
+    cursor: pointer;
+    transition: 0s;
+}
+
+.form__button:hover {
+    border-color: var(--black);
+    color: var(--light-gray);
+    background: var(--dark-blue);
+    outline: none;
+}
+
+.form__button:active {
+    background: var(--black);
+}
+
+.form__label {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 36px 32px;
+    border: 4px dashed var(--brown);
+    box-sizing: border-box;
+    color: var(--dark-gray);
+    background: var(--peach);
+    cursor: pointer;
+    transition: 0s;
+}
+
+.form__label:hover,
+.form__label_dragover {
+    border-color: var(--dark-blue);
+    color: var(--black);
+    background: var(--blue);
+    outline: none;
+}
+
+.form__label:active {
+    background: var(--dark-blue);
+}
+
+.form__info,
+.form__name,
+.form__error {
+    margin: 0;
+    padding: 0;
+    color: var(--gray);
+}
+
+.form__error {
+    color: var(--red);
+}
+
+.form__preview-img {
+    display: block;
+    max-height: 92px;
+    max-width: 92px;
+    margin-bottom: 12px;
+    object-fit: scale-down;
+    image-rendering: pixelated;
+}
+
+.form__name {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.form__file-name-dots {
+    color: var(--black);
+}
+
+.form__remove {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.form__remove::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    transition: 0s;
+}
+
+.form__remove-icon {
+    --size: 22px;
+    height: var(--size);
+    width: var(--size);
+    fill: var(--brown);
+}
+
+.form__remove:hover .form__remove-icon {
+    fill: var(--red);
+}
+
+.form__remove:active .form__remove-icon {
+    fill: var(--purple);
+}
+
+.form__converted-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.form__svg-code {
+    max-height: 50vh;
+    width: 100%;
+    margin: 0;
+    padding: 12px 16px;
+    border: 4px solid var(--dark-blue);
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: var(--light-gray);
+    overflow: auto;
+}
+
+.form__svg-code:focus {
+    border-color: var(--green);
+    outline: none;
+}
+
+.form__download {
+    border-color: var(--green);
+    color: var(--black);
+    background: var(--lime);
+}
+
+.form__download:hover {
+    border-color: var(--black);
+    background: var(--green);
+    color: var(--black);
+}
+
+.form__download:active {
+    background: var(--black);
+    color: var(--green);
+}
+
+.form__delete:hover,
+.form__delete:focus {
+    border-color: var(--purple);
+    background: var(--red);
+    color: var(--black);
+}
+
+.form__delete:active {
+    background: var(--purple);
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.footer__github {
+    --size: 32px;
+    height: var(--size);
+    width: var(--size);
+    fill: var(--black);
+}
+
+.footer__github:hover {
+    fill: var(--blue);
+}
